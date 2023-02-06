@@ -35,6 +35,8 @@ class ViewController: UIViewController {
                         print(dict?.value(forKey: "hits") as? NSArray ?? [])
                         
                         self.hitsArray = dict?.value(forKey: "hits") as? NSArray ?? []
+                        
+                        self.title = "Total Data: \(self.hitsArray?.count ?? 0)"
                         self.listTableView.reloadData()
                    }
                 case .failure(let error):
